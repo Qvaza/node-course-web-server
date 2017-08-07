@@ -22,9 +22,9 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(function(req, res, next) {
-    res.render('maintenance.hbs');
-});
+// app.use(function(req, res, next) {
+//     res.render('maintenance.hbs');
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -46,6 +46,12 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
     res.render('about.hbs', {
         pageTitle: 'About Page'
+    });
+});
+
+app.get('/projects', function(req, res) {
+    res.render('projects.hbs', {
+        pageTitle: 'Portfolio page'
     });
 });
 
